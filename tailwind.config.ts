@@ -8,9 +8,15 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        monospace: 'monospace'
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        white1: '#fafafa',
+        gray0: '#fafafa',
+        gray1: '#f2f2f2'
       },
     },
   },

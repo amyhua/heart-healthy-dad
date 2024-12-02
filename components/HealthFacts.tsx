@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const facts = [
   {
     english: 'Meals with high content of fat or protein help delay and prolong increases in blood sugar, but too much fat will increase your cholesterol.',
@@ -31,7 +29,7 @@ const HealthFacts = () => {
   return (
     <ul className="grid grid-cols-2">
       {facts.map((fact, i) => (
-        <li className="min-w-[420px] flex bg-white border-l border-l-8 border-l-black p-4 rounded-lg shadow-lg mr-5 mb-8 text-xl max-w-[600px] mb-5">
+        <li key={i} className="min-w-[420px] flex bg-white border-l border-l-8 border-l-black p-4 rounded-lg shadow-lg mr-5 mb-8 text-xl max-w-[600px] mb-5">
           <div className="flex-1">
             <p className="font-bold text-3xl">
               {fact.chinese}

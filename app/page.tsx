@@ -1,13 +1,12 @@
 import HealthFacts from "@/components/HealthFacts";
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
 
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="bg-gray-100 text-black min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex items-left flex-col justify-center">
+    <div className="bg-[#fafafa] text-black min-h-screen p-8 pb-20 md:p-20 sm:p-4 font-[family-name:var(--font-geist-sans)]">
+      <main className="flex items-left flex-col justify-center max-w-7xl mx-auto">
         <div className="mb-10 text-right">
           <Link href="/search">
             <button className="inline-block p-3 rounded-full bg-blue-700 text-white text-xl font-bold">
@@ -35,7 +34,7 @@ export default function Home() {
           <div className="flex-1 ml-12 text-xl">
             {
               new Array(3).fill(null).map((_, i) => (
-                <article className="mb-6 mr-6 rounded-lg border border-gray-400 border-2 bg-white shadow-lg inline-block p-4 rounded-lg min-w-[100px]">
+                <article key={i} className="mb-6 mr-6 rounded-lg border border-gray-400 border-2 bg-white shadow-lg inline-block p-4 rounded-lg min-w-[100px]">
                   <header className="mb-3 font-bold">⏰ {new Date().toLocaleTimeString()}</header>
                   <div className="flex">
                     <div>
@@ -67,7 +66,7 @@ export default function Home() {
           <div className="flex-1 ml-12 text-xl">
             {
               new Array(2).fill(null).map((_, i) => (
-                <article className="mb-6 mr-6 rounded-lg border border-gray-400 border-2 bg-white shadow-lg inline-block p-4 rounded-lg min-w-[100px]">
+                <article key={i} className="mb-6 mr-6 rounded-lg border border-gray-400 border-2 bg-white shadow-lg inline-block p-4 rounded-lg min-w-[100px]">
                   <header className="mb-3 font-bold">⏰ {new Date().toLocaleTimeString()}</header>
                   <div className="flex">
                     <div>
